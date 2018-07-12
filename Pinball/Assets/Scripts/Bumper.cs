@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bumper : MonoBehaviour {
     public float force = 100.0f;
     public float forceRadius = 1.0f;
+    public bool encendido;
 	// Use this for initialization
 	void Start () {
 		
