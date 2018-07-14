@@ -59,7 +59,7 @@ public class GameController : MonoBehaviour {
     {
         Debug.Log("PERDIO");
         //HACER ALGO ACA
-        textoPuntaje.text = puntos + " puntos";
+        textoPuntajeGameOver.text = puntos + " puntos";
         gameOverData.SetActive(true);
     }
 }
