@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bumper : MonoBehaviour {
+public class Bumper : MonoBehaviour
+{
     public float force = 100.0f;
     public float forceRadius = 1.0f;
     public int puntos = 0;
@@ -10,7 +11,8 @@ public class Bumper : MonoBehaviour {
     private MeshRenderer renderer;
     private GameController gameController;
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
 
         renderer = GetComponent<MeshRenderer>();
 
@@ -26,11 +28,12 @@ public class Bumper : MonoBehaviour {
         {
             Debug.Log("Cannot find 'GameController' script");
         }
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -41,6 +44,14 @@ public class Bumper : MonoBehaviour {
             {
                 col.GetComponent<Rigidbody>().AddExplosionForce(force, transform.position, forceRadius);
                 encender();
+                try
+                {
+                    col.GetComponent<AudioSource>().Play();
+                }
+                catch (System.Exception e)
+                {
+                    Debug.Log("Error sonido");
+                }
             }
         }
         gameController.sumarPuntos(puntos);
@@ -51,7 +62,7 @@ public class Bumper : MonoBehaviour {
         renderer.material.EnableKeyword("_EMISSION");
         renderer.UpdateGIMaterials();
         //La espera se tiene que hacer en una co-rutina de tipo IEnumerator para que funcione
-        StartCoroutine(Pausa());  
+        StartCoroutine(Pausa());
     }
 
     IEnumerator Pausa()
