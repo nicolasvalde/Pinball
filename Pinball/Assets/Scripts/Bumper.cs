@@ -46,7 +46,7 @@ public class Bumper : MonoBehaviour
                 encender();
                 try
                 {
-                    col.GetComponent<AudioSource>().Play();
+                    GetComponent<AudioSource>().Play();
                 }
                 catch (System.Exception e)
                 {
