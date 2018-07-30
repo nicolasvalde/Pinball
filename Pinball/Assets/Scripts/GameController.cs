@@ -14,12 +14,15 @@ public class GameController : MonoBehaviour {
     private int puntos;
     private int vidas;
 
+    private AudioSource musica;
+
     // Use this for initialization
     void Start () {
         puntos = 0;
         vidas = 3;
         actualizarPuntaje();
         actualizarVidas();
+        musica = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -61,5 +64,6 @@ public class GameController : MonoBehaviour {
         //HACER ALGO ACA
         textoPuntajeGameOver.text = puntos + " puntos";
         gameOverData.SetActive(true);
+        musica.Stop();
     }
 }
