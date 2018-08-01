@@ -28618,7 +28618,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh18576
+  m_Name: pb_Mesh19242
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -40052,7 +40052,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 1
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &1936782047
 MeshCollider:
@@ -50935,7 +50935,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh19628
+  m_Name: pb_Mesh19636
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
